@@ -18,7 +18,8 @@ module.exports = function (/* ctx */) {
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/boot-files
     boot: [
-      
+      'firebase',
+      'router-auth'
     ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
@@ -88,16 +89,21 @@ module.exports = function (/* ctx */) {
       // you can manually specify Quasar components/directives to be available everywhere:
       //
       // components: [],
-
+      // directives: [],
       directives: [
         'Ripple',
         'ClosePopup'
       ],
-
       // Quasar plugins
       plugins: [
-        'Nptify',
+        'Notify',
         'Dialog'
+      ],
+      components: [
+        'QBanner',
+        'QTabPanels',
+        'QTabPanel',
+        'QSeparator'
       ]
     },
 
@@ -115,8 +121,8 @@ module.exports = function (/* ctx */) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: `maverick-todo`,
-        short_name: `maverick-todo`,
+        name: `Quasar App`,
+        short_name: `Quasar App`,
         description: `A Quasar Framework app`,
         display: 'standalone',
         orientation: 'portrait',

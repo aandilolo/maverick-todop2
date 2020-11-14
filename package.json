@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
-    "core-js": "^3.6.5",
+    "core-js": "^3.7.0",
+    "firebase": "^8.0.2",
     "quasar": "^1.0.0"
   },
   "devDependencies": {
